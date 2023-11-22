@@ -1,0 +1,11 @@
+title: Card status
+type: string
+description: The status this card is currently in.
+enum:
+    - PENDING
+    - LOCKED
+    - MANAGE-LOCKED
+    - PAYTRON-LOCKED
+    - NEEDS APPROVAL
+    - ACTIVE
+    - CANCELLED

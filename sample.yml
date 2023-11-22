@@ -1,0 +1,28 @@
+openapi: "3.0.2"
+info:
+    title: API Title
+    version: "1.0"
+servers:
+    - url: https://api.server.test/v1
+paths:
+    /test:
+        get:
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    data:
+                                        type: array
+                                        items:
+                                            $ref: "#/components/schemas/ExternalFile1"
+                                    next:
+                                        type: string
+components:
+    schemas:
+        ExternalFile1:
+            type: object # this seems to be breaking the preview, if you remove this line it works. I have noticed caching behaviour where the last working version will open even if you close and reopen the preview after breaking it with this line. Reloading vscode seems to remove that cache.
+            $ref: "./models/External1.yml"

@@ -1,0 +1,7 @@
+title: External1
+type: object
+properties:
+    card:
+        properties:
+            status:
+                $ref: "./External2.yml"
